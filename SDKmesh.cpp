@@ -425,12 +425,12 @@ HRESULT CDXUTSDKMesh::CreateFromMemory( ID3D11Device* pDev11,
     m_pSubsetArray = ( SDKMESH_SUBSET* )( m_pStaticMeshData + m_pMeshHeader->SubsetDataOffset );
     m_pFrameArray = ( SDKMESH_FRAME* )( m_pStaticMeshData + m_pMeshHeader->FrameDataOffset );
     m_pMaterialArray = ( SDKMESH_MATERIAL* )( m_pStaticMeshData + m_pMeshHeader->MaterialDataOffset );
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     WriteSDKMeshToTextFile(*m_pMeshHeader, m_pVertexBufferArray, m_pIndexBufferArray,
         m_pMeshArray, m_pSubsetArray, m_pFrameArray, m_pMaterialArray,
         "output_sdkmesh.txt");
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     // Setup subsets
     for( UINT i = 0; i < m_pMeshHeader->NumMeshes; i++ )
     {
@@ -1087,8 +1087,9 @@ HRESULT CDXUTSDKMesh::LoadAnimation( WCHAR* szFileName )
         {
             pFrame->AnimationDataIndex = i;
         }
+	    ///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
         WriteSDKAnimationDataToTextFile(m_pAnimationFrameData[i].pAnimationData, m_pAnimationHeader->NumFrames, "output_animation.txt");
-
+	///////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
     }
     hr = S_OK;
 Error:
