@@ -513,7 +513,7 @@ public:
     bool                            GetAnimationProperties( UINT* pNumKeys, FLOAT* pFrameTime );
 
     // Write SDKANIMATION_DATA for each keyframe
-
+//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     void WriteSDKMeshToTextFile(const SDKMESH_HEADER& header,
         const SDKMESH_VERTEX_BUFFER_HEADER* vertexBufferHeaders,
@@ -632,7 +632,7 @@ public:
         file.close();
         std::cout << "SDKMESH data written to text file: " << filename << std::endl;
     }
-
+/////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////
 
     void WriteSDKAnimationDataToTextFile( SDKANIMATION_DATA* animationData,
         UINT numKeys,
